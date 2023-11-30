@@ -1,0 +1,75 @@
+BODY {
+    color: #3b4043;
+    background-color: #f8f8f8;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+P {
+    font-size: 12pt;
+    text-align: justify;
+}
+
+H1,
+H2 {
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1mm;
+    text-shadow: rgb(150, 150, 150) 1mm 1mm 1px;
+    margin-left: 30px
+}
+
+H1 {
+    font-size: 20pt 
+}
+
+H2 {
+    font-size: 18pt;
+}
+
+address {
+    font-size: 10pt;
+    font-style: italic;
+    text-align: right
+}
+
+.squared {
+    list-style-type: square
+}
+
+ul {
+    list-style-type: circle;
+    margin-left: -20px;
+}
+
+
+#navbar {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    text-transform: uppercase;
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+#Cheader {
+    width: 100%;
+    /*padding: 0 20px;*/
+    border-bottom: thin dotted #B1BEC6;
+}
+
+#Cnavbar {
+    width: 30%;
+    min-width: 240px;
+    float: left;
+
+}
+
+#Cmain {
+    width: 70%;
+    float: left;
+}
+
+#Ccopyright {
+    width: 100%;
+    clear: both;
+    border-top: thin dotted #B1BEC6;
+}
