@@ -1,6 +1,6 @@
 BODY {
     color: #3b4043;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     font-family: Verdana, Arial, sans-serif;
 }
 
@@ -10,20 +10,37 @@ P {
 }
 
 H1,
-H2 {
+H2,
+H3 {
     font-weight: normal;
     font-family: Arial, sans-serif;
     letter-spacing: 1mm;
-    text-shadow: rgb(150, 150, 150) 1mm 1mm 1px;
     margin-left: 30px
 }
 
 H1 {
-    font-size: 20pt 
+    font-size: 36pt;
+    /* text-shadow: rgb(150, 150, 150) 1mm 1mm 1px; */
+    text-shadow: rgb(130, 216, 245) 1mm 1mm 1px;
+    font-weight: bold;
+    color: forestgreen;
+    /* color: #d90000; */
 }
 
 H2 {
-    font-size: 18pt;
+    font-size: 16pt
+}
+
+H3 {
+    font-size: 14pt;
+    color: forestgreen;
+    /* color: #d90000; */
+}
+
+
+blockquote p {
+    font-size: 12pt;
+    font-style: italic
 }
 
 address {
@@ -36,10 +53,45 @@ address {
     list-style-type: square
 }
 
+
 ul {
     list-style-type: circle;
-    margin-left: -20px;
+    /* margin-left: -20px; */
 }
+
+
+
+#Cnavhead {
+
+    text-align: right;
+    display: inline;
+}
+
+#horiznavbar {
+    /* background-color: aquamarine; */
+    margin: 0;
+    padding: 0;
+}
+
+#horiznavbar a {
+    /* color: #fff; */
+    color: rgb(9, 159, 209);
+    padding: 5px 10px;
+    /* width: 100px; */
+    text-decoration: none;
+}
+
+#horiznavbar a:hover {
+    /* color: rgb(130, 216, 245); */
+    color: rgb(170, 222, 250);
+    border-radius: 20px 5px;
+    background-color: rgb(9, 159, 209);
+}
+
+#horiznavbar li {
+    display: inline;
+}
+
 
 
 #navbar {
@@ -50,23 +102,42 @@ ul {
     margin-left: -30px;
 }
 
-#Cheader {
-    width: 100%;
-    /*padding: 0 20px;*/
-    border-bottom: thin dotted #B1BEC6;
+#Clogo {
+    /* width: 20%; */
+    float: left;
+    opacity: 0.6;
+    top: 0px;
+    left: 20px;
+    position: absolute;
+    z-index: 1;
 }
 
+
+#Cheader {
+    /* background-color:blueviolet; */
+    width: 100%;
+    height: 274px;
+    /*padding: 0 20px;*/
+    border-bottom: thin dotted #B1BEC6;
+    float: left;
+    text-align: center;
+
+}
+
+
+
 #Cnavbar {
-    width: 30%;
+    width: 20%;
     min-width: 240px;
     float: left;
 
 }
 
 #Cmain {
-    width: 70%;
+    width: 80%;
     float: left;
-}
+    /* border-top: thin dotted #B1BEC6;*/
+} 
 
 #Ccopyright {
     width: 100%;
