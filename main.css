@@ -9,6 +9,10 @@ P {
     text-align: justify;
 }
 
+p em {
+    color: forestgreen;
+}
+
 H1,
 H2,
 H3 {
@@ -34,50 +38,31 @@ H2 {
 H3 {
     font-size: 14pt;
     color: forestgreen;
-    /* color: #d90000; */
 }
-
 
 blockquote p {
     font-size: 12pt;
     font-style: italic
 }
 
-address {
-    font-size: 10pt;
-    font-style: italic;
-    text-align: right
-}
-
-.squared {
-    list-style-type: square
-}
-
-
-ul {
+/* ul {
     list-style-type: circle;
-    /* margin-left: -20px; */
-}
-
+   } */
 
 
 #Cnavhead {
-
     text-align: right;
     display: inline;
 }
 
 #horiznavbar {
-    /* background-color: aquamarine; */
     margin: 0;
     padding: 0;
 }
 
 #horiznavbar a {
-    /* color: #fff; */
     color: rgb(9, 159, 209);
     padding: 5px 10px;
-    /* width: 100px; */
     text-decoration: none;
 }
 
@@ -93,17 +78,7 @@ ul {
 }
 
 
-
-#navbar {
-    font-family: Arial, sans-serif;
-    font-size: 14pt;
-    text-transform: uppercase;
-    list-style-type: none;
-    margin-left: -30px;
-}
-
 #Clogo {
-    /* width: 20%; */
     float: left;
     opacity: 0.6;
     top: 0px;
@@ -114,33 +89,80 @@ ul {
 
 
 #Cheader {
-    /* background-color:blueviolet; */
     width: 100%;
     height: 274px;
-    /*padding: 0 20px;*/
-    border-bottom: thin dotted #B1BEC6;
+    /* border-bottom: thin dotted #B1BEC6; */
+    border-bottom: thin dotted forestgreen;
     float: left;
     text-align: center;
-
 }
 
 
 
 #Cnavbar {
-    width: 20%;
+    /* width: 20%; */
     min-width: 240px;
     float: left;
+    /* border-right: thin dotted #B1BEC6; */
+    /* border-right: thin dotted forestgreen; */
+}
 
+#navbar {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#navbar li {
+    padding: 5px;
+}
+
+#navbar a {
+    color: rgb(9, 159, 209);
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+#navbar a:hover {
+    color: rgb(170, 222, 250);
+    border-radius: 20px 5px;
+    background-color: rgb(9, 159, 209);
 }
 
 #Cmain {
-    width: 80%;
+    width: 73%;
     float: left;
     /* border-top: thin dotted #B1BEC6;*/
+    /* border-left: thin dotted forestgreen;*/
 } 
 
-#Ccopyright {
+/*    footer    */
+#Cfooter {
     width: 100%;
-    clear: both;
-    border-top: thin dotted #B1BEC6;
+    /* border-top: thin dotted #B1BEC6; */
+    border-top: thin dotted forestgreen;
+    float: left;
 }
+
+#Ckontakt,
+#Cadresse,
+#Clogoklein {
+    float: right;
+    margin-right: 20px;
+}
+
+#Ckontakt p a {
+    text-decoration: none;
+    color: #3b4043;
+}
+
+#Clogoklein {
+    opacity: 0.6;
+}
+/*    footer    */
