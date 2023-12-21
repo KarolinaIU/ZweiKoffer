@@ -13,6 +13,7 @@ p em {
     color: forestgreen;
 }
 
+
 H1,
 H2,
 H3 {
@@ -103,7 +104,7 @@ blockquote p {
     /* width: 20%; */
     min-width: 240px;
     float: left;
-    /* border-right: thin dotted #B1BEC6; */
+     /* border-right: thin dotted #B1BEC6; */
     /* border-right: thin dotted forestgreen; */
 }
 
@@ -138,9 +139,10 @@ blockquote p {
 #Cmain {
     width: 73%;
     float: left;
+    /* background-color: rosybrown; */
     /* border-top: thin dotted #B1BEC6;*/
     /* border-left: thin dotted forestgreen;*/
-} 
+}
 
 /*    footer    */
 #Cfooter {
@@ -165,4 +167,159 @@ blockquote p {
 #Clogoklein {
     opacity: 0.6;
 }
+
 /*    footer    */
+button {
+    font-size: 14pt;
+    padding: 5px 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(170, 222, 250);
+    border-radius: 20px 5px;
+    background-color: rgb(9, 159, 209);
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-decoration: none;
+  }
+button a {
+    color: rgb(170, 222, 250);
+    text-decoration: none;
+}
+
+    button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    ;
+}
+
+button:active {
+    background-color: rgb(9, 159, 209);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(4px);
+}
+
+/* #button2 {
+    visibility: visible;
+} */
+/* #button1 {
+    visibility: visible;
+} */
+/*---------------------------------------------*/
+.col_25 {
+    float:left;
+    /* width: 30%; */
+    width: 20%;
+    margin-top: 6px;
+}
+.col_75 {
+    /* float: right; */
+    float:left;
+    /* width: 70%; */
+    width: 80%;
+    margin-top: 6px;
+}
+
+.col_2 {
+    float:left;
+    /* width: 30%; */
+    width: 50%;
+    margin-top: 6px;
+}
+.col_7 {
+    /* float: right; */
+    float:left;
+    /* width: 70%; */
+    width: 50%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#Ccont_adress{
+    /* width: 40%;
+    float: left;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px; */
+    width: 73%;
+    float: right;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14pt;
+    margin: 0px 2px;
+    box-sizing: border-box;
+      /* width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red; */
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+#demo {
+    color: forestgreen;
+}
+#antwort{
+    color: crimson;
+    font-style: italic;
+    /* letter-spacing: 1mm; */
+    margin-left: 30px
+}
+
+#button4, #button5 {
+    float: left;
+}
+#button6, #button7 {
+    float:left;
+}
+/*---------------------------------------------*/
+/* #kleider:checked {
+    width: 50px;
+    height: 50px;
+    background-color: forestgreen;
+} */
+#cchekbox{ 
+    float: left;  
+    margin-left: 25px;
+}
+.gebiet {
+    /* float: right; */
+    float:left;
+    width: 40%; 
+    margin-top: 6px;
+    margin-left: 25px;
+}
+
+#Cmain_kleid {
+    width: 73%;
+    float: right;
+ }
+#Cmain_gebiet {
+    width: 73%;
+    float: right;
+ }
+ #Cende {
+    width: 73%;
+    float: right;
+ }
+
+ #ekleidung, #ekriesengebiet, #eabhol2, #eabhol3 {
+    color: forestgreen;
+    font-style: italic;
+    font-size: 14pt;
+ }
