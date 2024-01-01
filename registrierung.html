@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <LINK REL="stylesheet" href="main.css" TYPE="text/css">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Zwei Koffer</title>
+</head>
+
+<header>
+    <div ID="Cnavhead">
+        <nav>
+            <ul id="horiznavbar">
+                <li><a class="tip" data-title="info@www.zweikoffer.de" href="#">E-Mail</a></li>
+                <li><a class="tip" data-title="+49&nbsp;159&nbsp;1112233" href="#">Telefon</a></li>
+                <li><a class="tip" data-title="Zugspitzstraße&nbsp;179 86165&nbsp;Augsburg" href="#">Adresse</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div ID="Cheader">
+        <h1>ZWEI KOFFER</h1>
+        <h2>Gemeinnützige Verein</h2>
+        <h3>Wir alle brauchen manchmal Hilfe</h3>
+    </div>
+    <div ID="Clogo">
+        <p><img src="Images\logo1.jpg" alt>
+            <dfn>Bild von <a target="_blank"
+                    href="https://www.freepik.com/free-vector/hand-drawn-people-with-suitcase-silhouette_78524520.htm#page=21&query=suitcase&position=36&from_view=search&track=sph&uuid=5cab3254-faa3-4084-93cf-9475915cf180">Freepik</a></dfn>
+        </p>
+    </div>
+</header>
+
+<body onload="registrierungHtmlLoad()">
+    <div ID="Cnavbar">
+        <ul ID="navbar">
+            <li><a href="index.html">Homepage</a></li>
+            <li data-action="kleiderSpenden"><a href="index.html?spenderegistrieren">Kleiderspende registrieren</a></li>
+            <li data-action="kleidZeigen"><a href="registrierung.html?abhol=false&zeigen=kleid">Vorschau der
+                    Kleiderspendenarten</a></li>
+            <li data-action="gebietZeigen"><a href="registrierung.html?abhol=false&zeigen=gebiet">Vorschau der
+                    Krisengebiete</a></li>
+        </ul>
+    </div>
+
+    <div id="Cantwort">
+        <blockquote>
+            <p id="antwort" style="visibility: hidden">Antwort</p>
+        </blockquote>
+    </div>
+
+    <div ID="Ccont_adress" style="display:none">
+        <blockquote>
+            <p id="demo1">Bitte geben Sie die Adresse an, an der wir die von Ihnen gespendete Kleidung abholen können.
+            </p>
+            <div ID="colbox_2">
+                <div class="row">
+                    <div class="col_1">
+                        <label for="abholadresse">Ort</label>
+                    </div>
+                    <div class="col_2">
+                        <select id="abholadresse" name="postabholadresse" onchange='plz_aktualisieren()'>
+                            <option value="kein">Wählen Sie einen Ort</option>
+                            <option value="Augsburg">Augsburg</option>
+                            <option value="Eresing">Eresing</option>
+                            <option value="Friedberg">Friedberg</option>     
+                            <option value="Fürstenfeldbruck">Fürstenfeldbruck</option>
+                            <option value="Ingolstadt">Ingolstadt</option>
+                            <option value="Kempten">Kempten</option>
+                            <option value="Königsbrunn">Königsbrunn</option>
+                            <option value="Landsberg am Lech">Landsberg am Lech</option>
+                            <option value="Mering">Mering</option>
+                            <option value="Neusäß">Neusäß</option>
+                            <option value="Nürnberg">Nürnberg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_1">
+                        <label for="strasse">Straße</label>
+                    </div>
+                    <div class="col_2">
+                        <input type="text" id="strasse" name="poststrasse" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_1">
+                        <label for="datum">Datum</label>
+                    </div>
+                    <div class="col_2">
+                        <input type="date" id="datum" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div ID="colbox_3">
+                <div class="row">
+                    <div class="col_3">
+                        <label for="abholplz">Postleitzahl</label>
+                    </div>
+                    <div class="col_4">
+                        <select id="abholplz" name="postabholplz"></select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_3">
+                        <label for="hausnum">Hausnummer</label>
+                    </div>
+                    <div class="col_4">
+                        <input type="text" id="hausnum" name="posthausnum" maxlength="4">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_1">
+                        <label for="zeit">Zeit</label>
+                    </div>
+                    <div class="col_2">
+                        <input type="time" id="zeit" name="postzeit">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col_2">
+                <!-- <button id="button5"><a href="index.html">Zurück</a></button> -->
+                <button id="button5"><a href="index.html?spenderegistrieren">Zurück</a></button>
+                <button id="button4" onclick='submit_plz()'>Bestätigen</button>
+            </div>
+        </blockquote>
+    </div>
+
+
+    <div ID="Cmain_kleid" style="display:none">
+        <blockquote>
+            <p id="demo2">Bitte wählen Sie die Kleidungsarten aus, die Sie spenden möchten.</p>
+
+            <div ID="colbox_1">
+                <label>
+                    <input type="checkbox" class="checkbox" value="Kinderkleidung">
+                    Kinderkleidung
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Damenbekleidung">
+                    Damenbekleidung
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Herrenbekleidung">
+                    Herrenbekleidung
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Bettdecken">
+                    Bettdecken
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Bettwäsche">
+                    Bettwäsche
+                </label>
+                <br>
+            </div>
+
+
+            <div ID="colbox_1">
+                <label>
+                    <input type="checkbox" class="checkbox" value="Kinderschuhe">
+                    Kinderschuhe
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Frauenschuhe">
+                    Frauenschuhe
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Herrenschuhe">
+                    Herrenschuhe
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Kissen">
+                    Kissen
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" class="checkbox" value="Matrazen">
+                    Matrazen
+                </label>
+            </div>
+        </blockquote>
+    </div>
+    <br>
+
+    <div ID="Cmain_gebiet" style="display:none">
+        <blockquote>
+            <p id="demo3">Bitte geben Sie das Krisengebiet an, in dem Sie Kleidung spenden möchten.</p>
+            <div ID="colbox_1">
+                <div class="col_1">
+                    <label for="kriesengebiete">Gebiet</label>
+                </div>
+                <div class="col_2">
+                    <select id="kriesengebiete" name="postkriesengebiete" onchange='kriesengebiet_aktualisieren()'>
+                        <option value="kein">Wählen Sie ein Gebiet</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Syrien">Syrien</option>
+                        <option value="Afganistan">Afganistan</option>
+                        <option value="Zentralafrikanische Republik">Zentralafrikanische Republik</option>
+                        <option value="Sambia">Republik Sambia</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Kolumbien">Kolumbien</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Simbabwe">Simbabwe</option>
+                        <option value="Honduras">Honduras</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="col_2">
+                <button id="button7" onclick='func_zurueck()'>Zurück</button>
+                <button id="button6" onclick='submit_KleidUndGebiet()'>Bestätigen</button>
+                <br>
+            </div>
+        </blockquote>
+    </div>
+
+
+    <div ID="Cende" style="display:none">
+        <blockquote>
+            <h4>Vielen Dank für Ihre Hilfe, Ihre Unterstützung und Ihre Spende! </h4>
+            <p>Die Kleidung, die Sie gespendet haben, nämlich:</p>
+            <p id="ekleidung"></p>
+            <p>wird von uns in das von Ihnen angegebene Krisengebiet geliefert:</p>
+            <p id="ekriesengebiet"></p>
+            <p id="eabhol1" style="display:none">Wir können die Kleidung an der von Ihnen angegebenen Adresse abholen:
+            </p>
+            <p id="eabhol2" style="display:none"></p>
+            <p id="eabhol3" style="display:none"></p>
+            <p id="eabhol4" style="display:none"></p>
+            <blockquote>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <div ID="Cfooter">
+        <div ID="Ckontakt">
+            <br>
+            <p><a href="#">Datenschutz</a></p>
+            <p><a href="#">Impressum</a></p>
+        </div>
+        <div ID="Ckontakt">
+            <p><em>Kontakt</em><br>
+                E-Mail: <a href="#">info<span>@</span>zweikoffer.de</a>
+                <br>Web: <a href="#">www.zweikoffer.de</a>
+                <br>Telefon: +49 159 1112233
+            </p>
+        </div>
+        <div ID="Ckontakt">
+            <p><em>Adresse</em><br>
+                <strong>Zwei Koffer</strong><br>
+                Zugspitzstraße 179<br>
+                86165 Augsburg
+            </p>
+        </div>
+        <div ID="Ckontakt">
+            <p><img src="Images\logo2.jpg" alt>
+                <br>
+                <dfn>Bild von <a target="_blank"
+                        href="https://www.freepik.com/free-vector/hand-drawn-people-with-suitcase-silhouette_78524520.htm#page=21&query=suitcase&position=36&from_view=search&track=sph&uuid=5cab3254-faa3-4084-93cf-9475915cf180">Freepik</a></dfn>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</html>

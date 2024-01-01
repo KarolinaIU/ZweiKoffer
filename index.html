@@ -4,7 +4,6 @@
 <head>
     <LINK REL="stylesheet" href="main.css" TYPE="text/css">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <!-- <script src="script.js"></script> -->
     <title>Zwei Koffer</title>
 </head>
 
@@ -12,39 +11,35 @@
     <div ID="Cnavhead">
         <nav>
             <ul id="horiznavbar">
-                <li><a href="#">Ich will helfen</a></li>
-                <li><a href="#">Ich brauche Hilfe</a></li>
-                <li><a href="#">E-Mail</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a class="tip" data-title="info@www.zweikoffer.de" href="#">E-Mail</a></li>
+                <li><a class="tip" data-title="+49&nbsp;159&nbsp;1112233" href="#">Telefon</a></li>
+                <li><a class="tip" data-title="Zugspitzstraße&nbsp;179 86165&nbsp;Augsburg" href="#">Adresse</a></li>
             </ul>
         </nav>
     </div>
 
-
     <div ID="Cheader">
         <h1>ZWEI KOFFER</h1>
         <h2>Gemeinnützige Verein</h2>
-        <h3>Menschliches Leben ist der höchste Wert</h3>
+        <h3>Wir alle brauchen manchmal Hilfe</h3>
     </div>
     <div ID="Clogo">
-        <p><img src="Images\logo1.jpg" alt></p>
+        <p><img src="Images\logo1.jpg" alt>
+            <dfn>Bild von <a target="_blank"
+                    href="https://www.freepik.com/free-vector/hand-drawn-people-with-suitcase-silhouette_78524520.htm#page=21&query=suitcase&position=36&from_view=search&track=sph&uuid=5cab3254-faa3-4084-93cf-9475915cf180">Freepik</a></dfn>
+        </p>
     </div>
 </header>
 
-<body>
+<body onload="indexHtmlLoad()">
     <div ID="Cnavbar">
         <ul ID="navbar">
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Hilfe zu gewähren</a>
-                <ul>
-                    <li><a href="#">Werde Freiwilliger</a></li>
-                    <li><a href="#">Kleidung spenden</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Hilfe bekommen</a></li>
-            <li><a href="#">Arten von Kleiderspenden</a></li>
-            <li><a href="#">Kriesengebiete</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#" onclick="buttonsZeigen(false)">Homepage</a></li>
+            <li><a href="#" onclick="buttonsZeigen(true)">Kleiderspende registrieren</a></li>
+            <!-- <li><a href="#">Homepage</a></li>
+            <li><a href="#" onclick="buttonsZeigen()">Kleiderspende registrieren</a></li> -->
+            <li><a href="registrierung.html?abhol=false&zeigen=kleid">Vorschau der Kleiderspendenarten</a></li>
+            <li><a href="registrierung.html?abhol=false&zeigen=gebiet">Vorschau der Krisengebiete</a></li>
         </ul>
     </div>
 
@@ -56,40 +51,44 @@
                 weil der Krieg kam. In den Koffern befanden sich Dokumente, ein Album mit alten Fotos,
                 mehrere Lieblingsbücher und einige der notwendigen Dinge zum ersten Mal.
             </p>
-        </blockquote>
-        <blockquote>
             <p>Er versuchte, nicht den Mut zu verlieren und versicherte sich selbst:
                 &quot;Gott sei Dank sind meine Familie und ich am Leben und wir konnten dort herauskommen,
                 wo es unmöglich geworden war, zu leben. Andere hatten nicht so viel Glück&hellip;&quot;
             </p>
-        </blockquote>
-        <blockquote>
             <p>Zwei Koffer können im Leben eines jeden Menschen bleiben, denn niemand ist vor Feuer,
                 Überschwemmung, Tsunami, Krieg und anderen schrecklichen Ereignissen sicher.
             </p>
-        </blockquote>
-        <blockquote>
             <p>Zwei Koffer sind im übertragenen Sinne auch das, was man anderen Menschen schenken kann,
                 um sie in schwierigen Lebenssituationen zu unterstützen.</p>
+            <p>Wir sammeln Dinge und spenden sie an bedürftige Menschen in verschiedenen Teilen der Welt.
+                Sie können sich die Arten von Dingen und die Krisengebiete ansehen, in die sie geschickt werden können.
+                Wenn Sie sich für eine Kleiderspende entscheiden, können Sie diese entweder bei uns an der Adresse</p>
+            <p><em>Zugspitzstraße 179<br>
+                    86165 Augsburg</em></p>
+            <p>abgeben oder wir holen sie an der von Ihnen angegebenen Adresse ab, sofern die Entfernung nicht zu weit
+                ist.
+                Wenn Sie Hilfe benötigen oder Anregungen haben, kontaktieren Sie uns bitte telefonisch
+            <p><em>+49 159 1112233</em></p>
+            oder schreiben Sie eine E-Mail an die Adresse <p><em>info<span>@</span>zweikoffer.de</em></p>
+            </p>
         </blockquote>
 
-        <!-- <button id="button1"><a href="t_button23.html">Eine Kleiderspende registrieren</a></button> -->
-        <button id="button1" onclick="fun1()">Eine Kleiderspende registrieren</button>
-        <br>
-        <!-- <button id="button2" style="visibility: hidden;" onclick="func_kleid()">Übergabe an der Geschäftsstelle</button>  -->
-        <!-- <button id="button2" onclick="funN()" style="visibility: hidden;"><a href="t_adresse.html?abhol=false">Übergabe an der Geschäftsstelle</button> 
-            <button id="button3" onclick="funA()" style="visibility: hidden;"><a href="t_adresse.html?abhol=true">Abholung</a></button> -->
-
-        <button id="button2" style="visibility: hidden;"><a href="t_adresse.html?abhol=false">Übergabe an der Geschäftsstelle</a></button>
-        <button id="button3" style="visibility: hidden;"><a href="t_adresse.html?abhol=true">Abholung</a></button>
-
+        <button id="buttonUebergabe" style="visibility: hidden"><a href="registrierung.html?abhol=false">Übergabe an der
+                Geschäftsstelle</a></button>
+        <button id="buttonAbholung" style="visibility: hidden"><a href="registrierung.html?abhol=true">Abholung von
+                Ihrem
+                Standort</a></button>
     </div>
     <script src="script.js"></script>
-
 </body>
 
 <footer>
     <div ID="Cfooter">
+        <div ID="Ckontakt">
+            <br>
+            <p><a href="#">Datenschutz</a></p>
+            <p><a href="#">Impressum</a></p>
+        </div>
         <div ID="Ckontakt">
             <p><em>Kontakt</em><br>
                 E-Mail: <a href="#">info<span>@</span>zweikoffer.de</a>
@@ -97,15 +96,19 @@
                 <br>Telefon: +49 159 1112233
             </p>
         </div>
-        <div ID="Cadresse">
+        <div ID="Ckontakt">
             <p><em>Adresse</em><br>
                 <strong>Zwei Koffer</strong><br>
                 Zugspitzstraße 179<br>
                 86165 Augsburg
             </p>
         </div>
-        <div ID="Clogoklein">
-            <p><img src="Images\logo2.jpg" alt></p>
+        <div ID="Ckontakt">
+            <p><img src="Images\logo2.jpg" alt>
+                <br>
+                <dfn>Bild von <a target="_blank"
+                        href="https://www.freepik.com/free-vector/hand-drawn-people-with-suitcase-silhouette_78524520.htm#page=21&query=suitcase&position=36&from_view=search&track=sph&uuid=5cab3254-faa3-4084-93cf-9475915cf180">Freepik</a></dfn>
+            </p>
         </div>
     </div>
 </footer>
